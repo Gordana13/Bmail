@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block title %} Bmail | Details {% endblock %}
+
+{% block heading %} Details {% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="/assets/css/details.css">
+
+    <div id="details">
+         <form action="/answer" method="post">
+             <h5>Subject: <input name="subject" value="{{ message.subject }}"></h5>
+             <hr/>
+             <p>To: <input name="to" value="{{ message.email }}"></p>
+             <hr/>
+             <p>{{ message.date.strftime("%d.%m.%Y at %H:%M") }}</p> <br/>
+             <p>{{ message.message }}</p> <br>
+             <p><textarea name="answer" rows="5" cols="50"></textarea></p>
+             <p><button type="submit">Send</button></p>
+        </form>
+    </div>
+
+{% endblock %}
+

@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block title %} Bmail | New Message {% endblock %}
+
+{% block heading %} New message {% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="/assets/css/new-message.css">
+
+    <div id="input">
+     <form method="post" action="/save">
+         <p><input name="to" placeholder="To"></p>
+         <p><input name="subject" placeholder="Subject"></p>
+         <p><textarea name="message" rows="8" cols="50"></textarea></p>
+         <button type="submit">Send</button>
+     </form>
+    </div>
+
+{% endblock %}

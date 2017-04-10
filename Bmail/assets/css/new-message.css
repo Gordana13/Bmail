@@ -1,0 +1,24 @@
+#input {
+    font-family: Georgia;
+    font-size: 16px;
+    width: 30%;
+    margin-left: 35%;
+}
+
+button {
+    background-color: lightblue;
+    border-radius: 8px;
+    width: 100px;
+}
+
+button:hover {
+    background-color: lightgray;
+    border-radius: 8px;
+    width: 100px;
+}
+
+#bottom {
+    background-color: blue;
+    height: 150px;
+    bottom: 0px;
+}

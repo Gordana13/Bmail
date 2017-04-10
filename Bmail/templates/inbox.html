@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block title %} Bmail | Inbox {% endblock %}
+
+{% block heading %} Inbox {% endblock %}
+
+{% block content %}
+
+    <table class="table">
+      <thead class="thead-inverse">
+        <tr>
+          <th>From</th>
+          <th>Subject</th>
+          <th>Message</th>
+            <th>Date</th>
+            <th>Details</th>
+        </tr>
+      </thead>
+
+    {% for message in inbox %}
+
+      <tbody>
+        <tr>
+          <td>{{ message.email }}</td>
+          <td>{{ message.subject }}</td>
+          <td>{{ message.message }}</td>
+            <td>{{ message.date.strftime("%d.%m.%Y at %H:%M") }}</td>
+            <td><a href="/details/{{ message.key.id() }}">View details</a></td>
+        </tr>
+      </tbody>
+
+    {% endfor %}
+
+</table>
+
+{% endblock %}
